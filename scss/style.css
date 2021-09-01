@@ -1,0 +1,276 @@
+* {
+	 box-sizing: border-box;
+}
+ .containerpg {
+	 display: flex;
+	 justify-content:space-evenly;
+	 align-items: center;
+	 min-height: 100vh;
+	 margin-left: 10%;
+	 margin-right: 10%;
+	 margin-top: 2%;
+	 background-color: #fbfbfd;
+	 background-image: linear-gradient(#04619F, #434343);
+	 box-shadow:1px 1px 1px 1px #888888;
+	 border-radius: 40px;
+
+}
+ .container__progressbars {
+	 display: flex;
+	 justify-content: space-evenly;
+	 align-items: center;
+	 flex-wrap: wrap;
+	 min-width: 270px;
+	 width: 100%;
+	 min-height: 100%;
+}
+ .progressbar {
+	 position: relative;
+	 width: 170px;
+	 height: 170px;
+	 margin: 5em;
+	 transform: rotate(-90deg);
+}
+ .progressbar__svg {
+	 position: relative;
+	 width: 100%;
+	 height: 100%;
+}
+ .progressbar__svg-circle {
+	 width: 100%;
+	 height: 100%;
+	 fill: none;
+	 stroke-width: 10;
+	 stroke-dasharray: 440;
+	 stroke-dashoffset: 440;
+	 stroke: #fff;
+	 stroke-linecap: round;
+	 transform: translate(5px, 5px);
+}
+ .shadow-html {
+	 filter: drop-shadow(0 0 5px #f63);
+}
+ .shadow-css {
+	 filter: drop-shadow(0 0 5px #3bf);
+}
+ .shadow-scss {
+	 filter: drop-shadow(0 0 5px #f3f);
+}
+ .shadow-js {
+	 filter: drop-shadow(0 0 5px #ff3);
+}
+ .shadow-ts {
+	 filter: drop-shadow(0 0 5px #37f);
+}
+ .shadow-node {
+	 filter: drop-shadow(0 0 5px #5f3);
+}
+ .shadow-react {
+	 filter: drop-shadow(0 0 5px #3ff);
+}
+ .shadow-angular {
+	 filter: drop-shadow(0 0 5px #f33);
+}
+ .shadow-vue {
+	 filter: drop-shadow(0 0 5px #3f8);
+}
+ .circle-html {
+	 animation: anim_circle-html 1s ease-in-out forwards;
+}
+ .circle-css {
+	 animation: anim_circle-css 1s ease-in-out forwards;
+}
+ .circle-scss {
+	 animation: anim_circle-scss 1s ease-in-out forwards;
+}
+ .circle-js {
+	 animation: anim_circle-js 1s ease-in-out forwards;
+}
+ .circle-ts {
+	 animation: anim_circle-ts 1s ease-in-out forwards;
+}
+ .circle-node {
+	 animation: anim_circle-node 1s ease-in-out forwards;
+}
+ .circle-react {
+	 animation: anim_circle-react 1s ease-in-out forwards;
+}
+ .circle-angular {
+	 animation: anim_circle-angular 1s ease-in-out forwards;
+}
+ .circle-vue {
+	 animation: anim_circle-vue 1s ease-in-out forwards;
+}
+ .progressbar__text {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 padding: 0.25em 0.5em;
+	 color: #fff;
+	 font-family: Arial, Helvetica, sans-serif;
+	 border-radius: 0.25em;
+	 transform: translate(-50%, -50%) rotate(90deg);
+}
+ @keyframes anim_circle-html {
+	 to {
+		 stroke-dashoffset: 50;
+	}
+}
+ @keyframes anim_circle-css {
+	 to {
+		 stroke-dashoffset: 65;
+	}
+}
+ @keyframes anim_circle-scss {
+	 to {
+		 stroke-dashoffset: 90;
+	}
+}
+ @keyframes anim_circle-js {
+	 to {
+		 stroke-dashoffset: 80;
+	}
+}
+ @keyframes anim_circle-ts {
+	 to {
+		 stroke-dashoffset: 100;
+	}
+}
+ @keyframes anim_circle-node {
+	 to {
+		 stroke-dashoffset: 72;
+	}
+}
+ @keyframes anim_circle-react {
+	 to {
+		 stroke-dashoffset: 140;
+	}
+}
+ @keyframes anim_circle-angular {
+	 to {
+		 stroke-dashoffset: 150;
+	}
+}
+ @keyframes anim_circle-vue {
+	 to {
+		 stroke-dashoffset: 75.2;
+	}
+}
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.page-title {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 400px;
+  perspective: 1000px;
+  padding-top: 2%;
+}
+
+.card-wrapper {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  transform-style: preserve-3d;
+  transition: transform 0.75s;
+  margin: 10px;
+}
+
+
+
+.front-card, .back-card {
+  box-sizing: border-box;
+  position: absolute;
+  width: 300px;
+  height: 400px;
+  background-color: white;
+  box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 15px;
+  backface-visibility: hidden;
+  background-image: linear-gradient(#04619F, #434343);
+}
+
+.front-card img {
+  width: 100%;
+  height: auto;
+}
+
+.back-card {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transform: rotate3d(0, 1, 0, 180deg);
+  transform-style: preserve-3d;
+}
+
+.second .back-card {
+  transform: rotate3d(1, 0, 0, 180deg);
+}
+
+.third .back-card {
+  transform: rotate3d(1, 1, 0, 180deg);
+}
+
+.back-card h2 {
+  font-size: 36px;
+}
+
+.back-card a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+  border: 1px solid white;
+  padding: 10px 50px;
+}
+
+
+
+
+
+.wave {
+  animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
+  animation-duration: 2.5s;        /* Change to speed up or slow down */
+  animation-iteration-count: infinite;  /* Never stop waving :) */
+  transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+    0% { transform: rotate( 0.0deg) }
+   10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+   20% { transform: rotate(-8.0deg) }
+   30% { transform: rotate(14.0deg) }
+   40% { transform: rotate(-4.0deg) }
+   50% { transform: rotate(10.0deg) }
+   60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+  100% { transform: rotate( 0.0deg) }
+}
+
+

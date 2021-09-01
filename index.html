@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="./scss/style.css">
+
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <title style="font-weight: bold;">Sanjit Kumar</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+    font-size: 62.5%;
+    font-size: 10px;
+    
+}
+
+
+.nav {
+    width: 100%;
+    height: 65px;
+    position: fixed;
+    line-height: 65px;
+    text-align: center;
+}
+
+.nav div.logo {
+    float: left;
+    width: auto;
+    height: auto;
+    padding-left: 3rem;
+}
+
+.nav div.logo a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+.nav div.logo a:hover {
+    color: #00E676;
+}
+
+.nav div.main_list {
+    height: 65px;
+    float: left;
+}
+
+.nav div.main_list ul {
+    width: 100%;
+    height: 65px;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav div.main_list ul li {
+    width: auto;
+    height: 65px;
+    padding: 0;
+    padding-left: 3rem;
+}
+
+.nav div.main_list ul li a {
+    text-decoration: none;
+    color: #fff;
+    line-height: 65px;
+    font-size: 3rem;
+    font-weight:500;
+}
+
+.nav div.main_list ul li a:hover {
+    color:antiquewhite;
+}
+
+
+/* Home section */
+
+.home {
+    width: 100%;
+    height: 100vh;
+    background-color: red; 
+    background-image: linear-gradient(#83EAF1, #63A4FF);
+    background-position: center top;
+	background-size:cover;
+}
+
+.navTrigger {
+    display: none;
+}
+
+.nav {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+
+/* Media qurey section */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .navTrigger {
+        display: block;
+    }
+    .nav div.logo {
+        margin-left: 15px;
+    }
+    .nav div.main_list {
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+    }
+    .nav div.show_list {
+        height: auto;
+        display: none;
+    }
+    .nav div.main_list ul {
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: #111;
+        /*same background color of navbar*/
+        background-position: center top;
+    }
+    .nav div.main_list ul li {
+        width: 100%;
+        text-align: right;
+    }
+    .nav div.main_list ul li a {
+        text-align: center;
+        width: 100%;
+        font-size: 3rem;
+        padding: 20px;
+    }
+    .nav div.media_button {
+        display: block;
+    }
+}
+
+
+/* Animation */
+/* Inspiration taken from Dicson https://codemyui.com/simple-hamburger-menu-x-mark-animation/ */
+
+.navTrigger {
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    margin: auto;
+    position: absolute;
+    right: 30px;
+    top: 0;
+    bottom: 0;
+}
+
+.navTrigger i {
+    background-color: #fff;
+    border-radius: 2px;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+}
+
+.navTrigger i:nth-child(1) {
+    -webkit-animation: outT 0.8s backwards;
+    animation: outT 0.8s backwards;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+}
+
+.navTrigger i:nth-child(2) {
+    margin: 5px 0;
+    -webkit-animation: outM 0.8s backwards;
+    animation: outM 0.8s backwards;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+}
+
+.navTrigger i:nth-child(3) {
+    -webkit-animation: outBtm 0.8s backwards;
+    animation: outBtm 0.8s backwards;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+}
+
+.navTrigger.active i:nth-child(1) {
+    -webkit-animation: inT 0.8s forwards;
+    animation: inT 0.8s forwards;
+}
+
+.navTrigger.active i:nth-child(2) {
+    -webkit-animation: inM 0.8s forwards;
+    animation: inM 0.8s forwards;
+}
+
+.navTrigger.active i:nth-child(3) {
+    -webkit-animation: inBtm 0.8s forwards;
+    animation: inBtm 0.8s forwards;
+}
+
+@-webkit-keyframes inM {
+    50% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(45deg);
+    }
+}
+
+@keyframes inM {
+    50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@-webkit-keyframes outM {
+    50% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(45deg);
+    }
+}
+
+@keyframes outM {
+    50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@-webkit-keyframes inT {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@keyframes inT {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@-webkit-keyframes outT {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@keyframes outT {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@-webkit-keyframes inBtm {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+@keyframes inBtm {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+@-webkit-keyframes outBtm {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+@keyframes outBtm {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+.affix {
+    padding: 0;
+    background-color:rgba(4,97,159,0.6);
+}
+
+
+.myH2 {
+	text-align:center;
+	font-size: 4rem;
+}
+.myP {
+	text-align: justify;
+	padding-left:15%;
+	padding-right:15%;
+	font-size: 20px;
+}
+@media all and (max-width:700px){
+	.myP {
+		padding:2%;
+	}
+
+
+ 
+  
+}
+
+</style>
+    
+</head>
+<body>
+    <nav class="nav" style="z-index: 1;">
+        <div class="container">
+            <!-- <div class="logo">
+                <a href="#" style="font-size:x-large; font-weight:500">Sanjit.com</a>
+            </div> -->
+            <div id="mainListDiv" class="main_list">
+                <ul class="navlinks">
+                    <li style="padding-right: 5px;"><a href="#about">About</a></li>
+                    <li style="padding-right: 5px;"><a href="#skills">Tools & Skills</a></li>
+                    <li  style="padding-right: 5px;"><a href="#projects">Projects</a></li>                
+                </ul>
+            </div>
+            <span class="navTrigger">
+                <i></i>
+                <i></i>
+                <i></i>
+            </span>
+        </div>
+    </nav>
+
+    <section>
+        <div  style="width:auto; height: 250px;">
+            <svg viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
+                <defs>
+                    <linearGradient id="Gradient1" x1="0" x2="1" y1="0" y2="1">
+                        <stop offset="0%" stop-color="#04619F" />
+                        <stop offset="100%" stop-color="#434343" />
+                    </linearGradient>
+                </defs>
+                <path d="M0,60 C150,25 350,150 500,40 L500,00 L0,0 Z" style="stroke: none; fill:url(#Gradient1);"></path>
+            </svg>
+        </div>
+    </section>
+        
+    <!-- ABOUT -->
+    <section class="about full-screen d-lg-flex justify-content-center align-items-center" id="about">
+        <div class="container">
+            <div class="row">
+    
+                <div class="col-lg-7 col-md-12 col-12 d-flex align-items-center">
+                    <div class="about-text">
+                        <small style="font-size:18px;">Welcome to my portfolio website !</small>
+                        <div>
+                            <span style="font-size:40px;font-weight:600;">Hey folks, I'm </span>                        
+                            <span style="color:#04619F;font-size:40px;font-weight:600;"> Sanjit Kumar</span>                            
+                        </div>
+                        <!-- <a href="#" class="fl_tw2">
+                            <i class="fa fa-file"></i> <span>Download Resume</span>
+                        </a> -->
+                        <div style="padding: 25px;"></div>
+                            <a href="https://drive.google.com/file/d/13yV4I2PGCxSojdn9IhqHWU3gNcw96Qe1/view?usp=sharing" target="_blank" class="fl_tw2" style="color: #fff;">
+                                <span>Download Resume</span>
+                            </a>
+                            <div style="padding-top: 25px;"">
+                                <!-- <span>
+                                    <a href="#" class="fa fa-mail" style="font-size: 25px; padding-right:10px;"></a>
+                                    <a href="#" class="fa fa-linkedin" style="font-size: 25px;padding-right:10px;"></a>
+                                    <a href="#" class="fa fa-instagram" style="font-size: 25px; padding-right:10px;"></a>
+                                    <a href="#" class="fa fa-github" style="font-size: 25px;padding-right:10px;"></a>
+                                </span> -->
+
+                                <div class="social-buttons">
+                                    
+                                    <a href="mailto:sanjit412kumar@gmail.com" class="social-buttons__button social-button social-button--mail" aria-label="SnapChat" style="text-decoration: none;">
+                                        <i class="fas fa-envelope"></i>
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/sanjit-kumar-18b09a1b3/" class="social-buttons__button social-button social-button--linkedin" aria-label="LinkedIn" style="text-decoration: none;">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                    
+                                    <a href="https://github.com/sanjitkumar28" class="social-buttons__button social-button social-button--github" aria-label="GitHub" style="text-decoration: none;">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+
+                                    <a href="https://www.instagram.com/sanjeetkumar.99/" class="social-buttons__button social-button social-button--facebook" aria-label="Facebook" style="text-decoration: none;">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        
+                </div>
+    
+                <div class="col-lg-5 col-md-12 col-12" style="z-index: -1;padding-left:140px;">
+                    <div  >
+                        <img src="./assets/sanjit.jpg" class="img-thumbnail" alt="svg image" style="height: 350px;">
+                    </div>
+                </div>
+        <div style="padding-bottom: 65px;" id="about"></div>
+            </div>
+        </div>
+    </section>
+        <div style="padding-bottom: 65px;" id="skills"></div>
+
+    <div >
+        <!-- just to make scrolling effect possible -->
+        <h2 class="myH2" >TOOLS & SKILLS</h2>
+
+        <!-- Code for the new pen -->
+        
+        <div class="containerpg">
+        
+            <div class="container__progressbars">
+
+                <div class="progressbar">
+                    <svg class="progressbar__svg">
+                        <circle cx="80" cy="80" r="70" class="progressbar__svg-circle circle-ts shadow-ts"> </circle>
+                    </svg>
+                    <span class="progressbar__text shadow-ts">C</span>
+                </div>
+                
+                <div class="progressbar">
+                    <svg class="progressbar__svg">
+                        <circle cx="80" cy="80" r="70" class="progressbar__svg-circle circle-node shadow-node"> </circle>
+                    </svg>
+                    <span class="progressbar__text shadow-node">C++</span>
+                </div>
+        
+                <div class="progressbar">
+                    <svg class="progressbar__svg">
+                        <circle cx="80" cy="80" r="70" class="progressbar__svg-circle circle-html shadow-html"> </circle>
+                    </svg>
+                    <span class="progressbar__text shadow-html">HTML</span>
+                </div>
+        
+                <div class="progressbar">
+                    <svg class="progressbar__svg">
+                        <circle cx="80" cy="80" r="70" class="progressbar__svg-circle circle-css shadow-css"> </circle>
+                    </svg>
+                    <span class="progressbar__text shadow-css">CSS</span>
+                </div>                
+        
+                <div class="progressbar">
+                    <svg class="progressbar__svg">
+                        <circle cx="80" cy="80" r="70" class="progressbar__svg-circle circle-js shadow-js"> </circle>
+                    </svg>
+                    <span class="progressbar__text shadow-js">JavaScript</span>
+                </div>
+
+                <div class="progressbar">
+                    <svg class="progressbar__svg">
+                        <circle cx="80" cy="80" r="70" class="progressbar__svg-circle circle-scss shadow-scss"> </circle>
+                    </svg>
+                    <span class="progressbar__text shadow-scss">BootStrap</span>
+                </div>
+        
+                
+        
+                <div class="progressbar">
+                    <svg class="progressbar__svg">
+                        <circle cx="80" cy="80" r="70" class="progressbar__svg-circle circle-react shadow-react"> </circle>
+                    </svg>
+                    <span class="progressbar__text shadow-react">SQL</span>
+                </div>
+                <div class="progressbar">
+                    <svg class="progressbar__svg">
+                        <circle cx="80" cy="80" r="70" class="progressbar__svg-circle circle-angular shadow-angular"> </circle>
+                    </svg>
+                    <span class="progressbar__text shadow-angular">Node.js</span>
+                </div>
+            </div>
+        
+        </div>
+        
+        <div style="padding-top: 5%;" id="projects"></div>
+
+
+<div >
+<h2 class="myH2">PROJECTS</h2>
+
+<div class="wrapper" >
+
+
+    <div class="card-wrapper first" style="z-index: -1;">
+
+        <div class="front-card">
+            <img src="./assets/1.jpeg" />
+            <h2 style="color: #fff;padding-top:15px;font-weight:600;font-size:x-large;"> TEXT EDITOR </h2>
+            <p style="color: #fff;font-weight:300;font-size:medium;"> It is a basic Text Editor which can be used to perform basic text editing operations. <br/> It is developed using HTML, CSS, JavaScript, Bootstrap.
+ </p>
+        </div>
+
+        
+
+    </div>
+
+    <div class="card-wrapper first" style="z-index: -1;">
+
+        <div class="front-card">
+            <img src="./assets/2.jpeg" />
+            <h2 style="color: #fff;padding-top:15px;font-weight:600;font-size:x-large;"> FILE COMPRESSOR </h2>
+            <p style="color: #fff;font-weight:300;font-size:medium;"> It is a website which can compress a file. The file compression is achieved by Huffman Coding. <br /> It is developed using HTML, CSS, JavaScript, Bootstrap. </p>
+        </div>
+
+
+    </div>
+
+    <div class="card-wrapper first" style="z-index: -1;">
+    
+        <div class="front-card" >
+            <img src="./assets/3.png" />
+            <h2 style="color: #fff;padding-top:15px;font-weight:600;font-size:x-large;"> PORTFOLIO WEBSITE </h2>
+            <p style="color: #fff;font-weight:300;font-size:medium;"> It is a static portfolio website which contains various details such as educational details, projects and
+            achievements. <br /> It is developed using HTML, CSS, JavaScript, Bootstrap. </p>
+        </div>
+    
+  
+    
+    </div>
+
+
+</div>
+
+
+<div style="padding-bottom: 10%;">
+
+</div>
+
+
+    <footer class="new_footer_area" style="color: #ffff;background-color:#04619F">
+        <div style="display: flex; align-items:center;justify-content:space-around;padding-top:20px;padding-bottom:20px;">
+            <div >                                      
+                    <span style="font-size:40px;font-weight:600;">Let's Connect </span><span class="wave" style="font-size:40px">👋</span>
+                    </div>
+                    <div>
+                        <div class="social-buttons">
+                        
+                            <a href="mailto:sanjit412kumar@gmail.com" class="social-buttons__button social-button social-button--mail" aria-label="SnapChat"
+                                style="text-decoration: none;">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/sanjit-kumar-18b09a1b3/" class="social-buttons__button social-button social-button--linkedin" aria-label="LinkedIn"
+                                style="text-decoration: none;">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        
+                            <a href="https://github.com/sanjitkumar28" class="social-buttons__button social-button social-button--github" aria-label="GitHub"
+                                style="text-decoration: none;">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        
+                            <a href="https://www.instagram.com/sanjeetkumar.99/" class="social-buttons__button social-button social-button--facebook" aria-label="Facebook"
+                                style="text-decoration: none;">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+       
+    </footer>
+    
+    <!-- Jquery needed -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
+    
+    <!-- Function used to shrink nav bar removing paddings and adding black background -->
+    <script>
+        $(window).scroll(function () {
+            if ($(document).scrollTop() > 50) {
+                $('.nav').addClass('affix');
+                console.log("OK");
+            } else {
+                $('.nav').removeClass('affix');
+            }
+        });
+    </script>
+</body>
+</html>
